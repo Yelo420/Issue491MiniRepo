@@ -1,0 +1,24 @@
+﻿<Window x:Class="Issue491MiniRepo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vlc="clr-namespace:LibVLCSharp.WPF;assembly=LibVLCSharp.WPF"
+        xmlns:local="clr-namespace:Issue491MiniRepo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="TabPlayer">
+                <vlc:VideoView x:Name="vlcVideoView">
+                    <StackPanel Orientation="Horizontal">
+                        <Button VerticalAlignment="Bottom" Height="100" Width="600" FontSize="30" FontWeight="Bold">I will dissapear after tab switch</Button>
+                    </StackPanel>
+                </vlc:VideoView>
+            </TabItem>
+            <TabItem Header="SecondTab">
+                <Button VerticalAlignment="Bottom" Height="100" Width="600" FontSize="20" FontWeight="Bold">I will stay cause im not part of an VideoView content</Button>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
